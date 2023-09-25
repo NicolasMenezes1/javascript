@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-body{
+body, html{
     background-color:rgba(11, 66, 102, 1);
 }
 
@@ -17,23 +17,9 @@ section {
     margin: auto;
     background-color: white;
     padding: 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);    
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+    
 }
-
-div{
-    text-align: center;
-    padding: 8px;
-}
-
-#img{
-    width: 200px;
-    height: 300px;
-}
-
-
-
-
-
 
 footer p{
 color: white;
