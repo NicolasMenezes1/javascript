@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        input{
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <input type="button" value="Clique para calcular" onclick="clica()">
+    <p id="p">O resultado vem aqui...</p>
+
+    <script>
+        function clica(){
+            let num = prompt('Digite um número')
+            let p = document.getElementById('p')
+            p.innerHTML = `O dobro de ${num} é ${num*2} e a metade é ${num/2}!`
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de JavaScript</title>
+    <style>
+        input{
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando dois números</h1>
+    <input type="button" value="Iniciar Soma" onclick="clicado()">
+    <p id="p">O resultado vem aqui...</p>
+
+    <script>
+        function clicado(){
+            let n1 = Number(prompt('Digite um número: '))
+            let n2 = Number(prompt('Digite outro número:'))
+            let res = n1+n2  
+
+            document.getElementById('p')
+            p.innerHTML = `<p> A soma ente <mark>${n1}</mark> e <mark>${n2}</mark> é igual a <strong>${res}</strong>! <\p>`
+        }
+    </script>
+
+</body>
+</html>

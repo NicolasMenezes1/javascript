@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <input type="button" value="Clique para calcular" onclick="calcular()">
+    <p id="p">O resultado vai aparecer aqui...</p>
+
+
+    <script>
+        function calcular(){
+            let n = prompt('Digite um número: ')
+            let p = document.getElementById('p')
+            let raiz = Math.sqrt(n)
+            p.innerHTML=`O número a ser analisado aqui será o ${n}
+            <hr>
+            <p>O seu valor absoluto é ${n}</p>
+            <p>A sua parte inteira é ${n}</p>
+            <p>O valor inteiro mais próximo é ${n}</p>
+            <p>A sua raiz quadrada é ${raiz}</p>
+            <p>O valor de 2<sup>2</sup> é ${n**2}</p>
+            <p>O valor de 2<sup>3</sup> é ${n**3}</p>
+            `
+        }
+    </script>
+</body>
+</html>
