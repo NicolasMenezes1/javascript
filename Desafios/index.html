@@ -4,46 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rick and Morty</title>
+    <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-    <form action="" method="get">
-        
+    <form action="" method="get">  
         <h1>Busca de personagem:</h1>
         <label for="characterId">ID da personagem</label>
         <input type="number" name="" id="characterId">
         <hr>
 
         <h1>Informações: </h1>
-        <label for="name">Nome</label>
-        <input type="checkbox" name="name" id="name" checked>
+        <div class="filtros">
+            <label for="name">Nome</label>
+            <input type="checkbox" name="name" id="name">
 
-        <label for="status">Status</label>
-        <input type="checkbox" name="status" id="status" checked>
+            <label for="status">Status</label>
+            <input type="checkbox" name="status" id="status">
 
-        <label for="species">Espécie</label>
-        <input type="checkbox" name="species" id="species" checked>
+            <label for="species">Espécie</label>
+            <input type="checkbox" name="species" id="species">
 
-        <label for="type">Type</label>
-        <input type="checkbox" name="type" id="type" checked>
+            <label for="type">Type</label>
+            <input type="checkbox" name="type" id="type">
 
-        <label for="gender">Gênero</label>
-        <input type="checkbox" name="gender" id="gender" checked>
+            <label for="gender">Gênero</label>
+            <input type="checkbox" name="gender" id="gender">
 
-        <label for="origin">Planeta de Origin</label>
-        <input type="checkbox" name="origin" id="origin" checked>
+            <label for="origin">Planeta de Origin</label>
+            <input type="checkbox" name="origin" id="origin">
 
-        <label for="image">Foto</label>
-        <input type="checkbox" name="image" id="image" checked>
-
-        <label for="episode">Episódios</label>
-        <input type="checkbox" name="episode" id="episode" checked>
+            <label for="episode">Episódios</label>
+            <input type="checkbox" name="episode" id="episode">
+        </div>
         <hr>
 
-        <button id="btn-go">Pesquisar</button>
+        <button type="submit" id="btn-go">Pesquisar</button>
+        <button type="reset" id="btn-reset">Limpar</button>
     </form>
-    <pre id="content"></pre> <!--Uma forma mais bonita para vizualizar objetos-->
-    <img src="" alt="" id="img">
+
+    <div id="result-style">
+        <img src="" alt="" id="img">
+        <pre id="content"></pre> <!--Uma forma mais bonita para vizualizar objetos-->
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
