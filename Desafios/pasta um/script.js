@@ -24,6 +24,14 @@ let fetchApi = (value) => { // esse let recebe uma função como valor, o parmet
 /* Quarto passo
 Fazer os filtros de informações funcionarem */ 
     let keys = ['name', 'status', 'species', 'gender', 'origin', 'episode'] // ao inves de fazer getelementbyid, eu faço esse array com todas as chaves e faço o getelementbyid uma vez só
+    let newKeys = {
+        name: 'Nome',
+        status: 'Status',
+        species: 'Espécie',
+        gender: 'Gênero',
+        origin: 'Planeta de Origem',
+        episode: 'Episódios',
+    }
     
     let buildResult = (result) => { //essa função vai ser disparada quando eu clicar em pesquisar, eu preciso receber o result (o resultado da consulta da API).
     return keys.map((key) => document.getElementById(key)) //o map me retorna outro array 
@@ -32,15 +40,15 @@ Fazer os filtros de informações funcionarem */
             let arrayResult = result[elem.name].join('\r\n')
             console.log(arrayResult);
             let newElem = document.createElement('p')
-            newElem.innerHTML = `${elem.name}: ${result[elem.name]}`
+            newElem.innerHTML = `${newKeys[elem.name]}: ${arrayResult}`
             content.appendChild(newElem)
         } else if(elem.checked === true && (elem.name === 'origin')){
             let newElem = document.createElement('p')
-            newElem.innerHTML = `${elem.name}: ${result[elem.name].name}`
+            newElem.innerHTML = `${newKeys[elem.name]}: ${result[elem.name].name}`
             content.appendChild(newElem)
         } else if(elem.checked === true && typeof(result[elem.name]) !== 'object'){
             let newElem = document.createElement('p')
-            newElem.innerHTML = `${elem.name}: ${result[elem.name]}`
+            newElem.innerHTML = `${newKeys[elem.name]}: ${result[elem.name]}`
             content.appendChild(newElem)
         }
     })
@@ -73,5 +81,5 @@ btnGo.addEventListener('click', async (event)=> { // o async é para fala que a 
     }
 }) 
 
-
+btnReset.addEventListener('click', () => location.reload());
 
